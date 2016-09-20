@@ -34,7 +34,7 @@ module.exports = function (options) {
 
     }, options);
 
-    seneca.add({ init:'seneca-mongoose' }, (args, next) => {
+    seneca.add({ init: 'seneca_mongoose' }, (args, next) => {
 
         Mongoose.connect(dbURI);
 
@@ -65,5 +65,5 @@ module.exports = function (options) {
         }); 
     });
 
-    return { name: 'seneca_mongoose' }
+    return 'seneca_mongoose';
 };
