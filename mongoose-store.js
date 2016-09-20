@@ -36,7 +36,7 @@ module.exports = function (options) {
 
     seneca.add({ init: 'seneca_mongoose' }, (args, next) => {
 
-        Mongoose.connect(dbURI);
+        Mongoose.connect(options.dbURI);
 
         Mongoose.connection.on('connected', function () {
 
