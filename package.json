@@ -1,0 +1,26 @@
+{
+  "name": "seneca-mongoose",
+  "version": "1.0.0",
+  "description": "Mongoose storage layer for Seneca framework",
+  "main": "mongoose-store.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "seneca",
+    "data",
+    "store",
+    "mongoose",
+    "mongo",
+    "mongodb",
+    "plugin"
+  ],
+  "author": "Steven Ceuppens",
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "files": [
+    "mongoose-store.js"
+  ]
+}
