@@ -40,7 +40,7 @@ module.exports = function (options) {
 
         Mongoose.connection.on('connected', function () {
 
-            console.log('Mongoose default connection open to ' + dbURI);
+            console.log('Mongoose default connection open to ' + options.dbURI);
 
             return next();
         });
