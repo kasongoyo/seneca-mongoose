@@ -22,5 +22,8 @@
   },
   "files": [
     "mongoose-store.js"
-  ]
+  ],
+  "dependencies": {
+    "mongoose": "^4.6.1"
+  }
 }
