@@ -2,7 +2,7 @@
   "name": "seneca-mongoose",
   "version": "1.0.0",
   "description": "Mongoose storage layer for Seneca framework",
-  "main": "mongoose-store.js",
+  "main": "mongoose.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,7 @@
     "node": ">=5.0.0"
   },
   "files": [
-    "mongoose-store.js"
+    "mongoose.js"
   ],
   "dependencies": {
     "mongoose": "^4.6.1"
