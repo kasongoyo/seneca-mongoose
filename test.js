@@ -4,7 +4,7 @@
     //dependencies
     const path = require('path');
     const Seneca = require('seneca');
-    const mongooseLayer = require(path.join(__dirname, 'mongoose'));
+    const mongooseLayer = require(path.join(__dirname, 'mongoose-store'));
     const expect = require('chai').expect;
 
     describe('Initialize seneca mongoose layer', function () {

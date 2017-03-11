@@ -33,7 +33,7 @@ module.exports = function (options) {
     const seneca = this;
 
 
-    seneca.add({ init: 'mongoose' }, (args, next) => {
+    seneca.add({ init: 'seneca-mongoose' }, (args, next) => {
 
         //generate mongoose connection uri string
         const host = options.host || '127.0.0.1';
@@ -91,7 +91,7 @@ module.exports = function (options) {
         });
     });
 
-    return 'mongoose';
+    return 'seneca-mongoose';
 };
 
 
