@@ -34,6 +34,10 @@ module.exports = function (options) {
 
 
     seneca.add({ init: 'seneca-mongoose' }, (args, next) => {
+        //Don't try to open unclosed connection
+        if (mongoose.connection.readyState) {
+            return;
+        }
 
         //generate mongoose connection uri string
         const host = options.host || '127.0.0.1';
