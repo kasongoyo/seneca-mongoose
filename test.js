@@ -20,18 +20,6 @@
                 });
         });
 
-        it.only('should the mongoose connection be ready', function (done) {
-            const seneca = Seneca();
-
-                seneca.test(done)
-                .use(mongooseLayer)
-                .ready(function () {
-                    const mongoose = require('mongoose');
-                    seneca.use(mongooseLayer);
-                    done();
-                });
-        });
-
 
         it('should connect using custom port when specified in options', function (done) {
             const port = 27017;

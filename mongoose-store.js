@@ -36,7 +36,7 @@ module.exports = function (options) {
     seneca.add({ init: 'seneca-mongoose' }, (args, next) => {
         //Don't try to open unclosed connection
         if (mongoose.connection.readyState) {
-            return;
+            return next();
         }
 
         //generate mongoose connection uri string
