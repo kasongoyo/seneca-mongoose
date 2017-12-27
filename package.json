@@ -4,7 +4,9 @@
   "description": "Mongoose storage layer for Seneca framework",
   "main": "mongoose-store.js",
   "scripts": {
-    "test": "mocha test.js"
+    "lint": "eslint --fix mongoose-store.js && eslint --fix mongoose_store_spec.js",
+    "test": "mocha mongoose_store_spec.js",
+    "pretest": "npm run lint"
   },
   "keywords": [
     "seneca",
@@ -25,11 +27,16 @@
     "test.js"
   ],
   "dependencies": {
-    "mongoose": "^4.6.1"
+    "mongoose": "^4.13.7"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
     "mongoose-autopopulate": "^0.5.0",
-    "mongoose-timestamp": "^0.6.0"
+    "mongoose-timestamp": "^0.6.0",
+    "seneca": "^3.4.3"
   }
 }
