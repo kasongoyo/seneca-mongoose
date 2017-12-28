@@ -47,7 +47,7 @@ module.exports = function mongooseStore(options) {
     // mongo options
     const mongoOptions = options.dbOptions || {};
     mongoOptions.useMongoClient = true;
-    // From Mongoose 4.2+ you must explicitly set default promise implementation for schema to use
+    // This promise affect only underlying db driver
     mongoOptions.promiseLibrary = global.Promise;
 
     // Add schema wise mongoose plugins
@@ -55,6 +55,8 @@ module.exports = function mongooseStore(options) {
     if (plugins) {
       plugins.forEach(plugin => mongoose.plugin(plugin));
     }
+    // From Mongoose 4.2+ you must explicitly set default promise implementation for schema to use
+    mongoose.Promise = global.Promise
 
     // Create the database connection
     mongoose.connect(uristring, mongoOptions);
