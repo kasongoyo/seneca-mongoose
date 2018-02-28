@@ -26,8 +26,8 @@
     "mongoose-store.js",
     "test.js"
   ],
-  "dependencies": {
-    "mongoose": "^4.13.7"
+  "peerDependencies": {
+    "mongoose": "^4.13.11"
   },
   "devDependencies": {
     "chai": "^3.5.0",
